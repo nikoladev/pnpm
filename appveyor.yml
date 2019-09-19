@@ -1,18 +1,19 @@
 environment:
   matrix:
-    - nodejs_version: 4
-    - nodejs_version: 6
-    - nodejs_version: 8
+    - nodejs_version: 8.15
 install:
   - ps: Install-Product node $env:nodejs_version
-  - npm set fetch-retry-maxtimeout 180000
-  - npm install -g pnpm@next
-  - pnpm install
+  - npm set verify-store-integrity false
+  - set PNPM_VERSION=next
+  - curl -L https://unpkg.com/@pnpm/self-installer | node
+  - pnpm -v
+  - pnpm recursive install --no-lock
 matrix:
   fast_finish: true
 build: off
 version: '{build}'
 test_script:
   - node --version
-  - npm --version
-  - npm test
+  - pnpm --version
+  - pnpm t
+skip_tags: true

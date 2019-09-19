@@ -1,0 +1,102 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "ignoreDeps": [
+    "@pnpm/assert-project",
+    "@pnpm/build-modules",
+    "@pnpm/config",
+    "@pnpm/constants",
+    "@pnpm/core-loggers",
+    "@pnpm/default-fetcher",
+    "@pnpm/default-reporter",
+    "@pnpm/default-resolver",
+    "@pnpm/fetch",
+    "@pnpm/fetcher-base",
+    "@pnpm/filter-lockfile",
+    "@pnpm/git-fetcher",
+    "@pnpm/git-resolver",
+    "@pnpm/headless",
+    "@pnpm/lifecycle",
+    "@pnpm/list",
+    "@pnpm/local-resolver",
+    "@pnpm/lockfile-file",
+    "@pnpm/lockfile-types",
+    "@pnpm/lockfile-utils",
+    "@pnpm/logger",
+    "@pnpm/modules-cleaner",
+    "@pnpm/modules-yaml",
+    "@pnpm/npm-registry-agent",
+    "@pnpm/npm-resolver",
+    "@pnpm/outdated",
+    "@pnpm/package-is-installable",
+    "@pnpm/package-requester",
+    "@pnpm/package-store",
+    "@pnpm/prune-lockfile",
+    "@pnpm/read-importers-context",
+    "@pnpm/read-importer-manifest",
+    "@pnpm/read-modules-dir",
+    "@pnpm/read-package-json",
+    "@pnpm/registry-mock",
+    "@pnpm/resolve-dependencies",
+    "@pnpm/resolver-base",
+    "@pnpm/server",
+    "@pnpm/hoist",
+    "@pnpm/store-controller-types",
+    "@pnpm/store-path",
+    "@pnpm/symlink-dependency",
+    "@pnpm/tarball-fetcher",
+    "@pnpm/tarball-resolver",
+    "@pnpm/types",
+    "@pnpm/utils",
+    "@pnpm/write-importer-manifest",
+    "dependencies-hierarchy",
+    "dependency-path",
+    "fetch-from-npm-registry",
+    "find-packages",
+    "pnpm-file-reporter",
+    "pkgs-graph",
+    "remove-all-except-outer-links",
+    "supi",
+    "ts-node"
+  ],
+  "ignorePaths": [
+    "test/",
+    "packages/dependencies-hierarchy/fixtures",
+    "packages/dependencies-hierarchy/fixtureWithLinks",
+    "packages/dependencies-hierarchy/example",
+    "packages/list/test/",
+    "packages/list/example/"
+  ],
+  "packageRules": [
+    {
+      "packageNames": ["@types/ramda"],
+      "allowedVersions": "0.25.34"
+    },
+    {
+      "packageNames": ["agentkeepalive"],
+      "allowedVersions": "4.0.0"
+    },
+    {
+      "packageNames": ["graceful-fs"],
+      "allowedVersions": "4.2.1"
+    },
+    {
+      "packageNames": ["https-proxy-agent"],
+      "allowedVersions": "2.2.1"
+    },
+    {
+      "packageNames": ["write-json-file"],
+      "allowedVersions": "4.0.0"
+    },
+    {
+      "packageNames": ["write-file-atomic"],
+      "allowedVersions": "2.4.3"
+    }
+  ],
+  "pinVersions": false,
+  "schedule": [
+    "on Friday",
+    "every weekend"
+  ]
+}

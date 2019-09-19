@@ -2,6 +2,7 @@
 
 ## Table of contents
 
+- [Setting Up the Environment](#setting-up-the-environment)
 - [Submitting a Pull Request (PR)](#submitting-a-pull-request-pr)
   - [After your pull request is merged](#after-your-pull-request-is-merged)
 - [Coding Style Guidelines](#coding-style-guidelines)
@@ -14,11 +15,17 @@
     - [Body](#body)
     - [Footer](#footer)
 
+## Setting Up the Environment
+
+1. Run `pnpm recursive install` in the root of the repository to install all dependencies.
+2. For compiling all packages in the repo, run `pnpm recursive run tsc` or `npm run build` in the root of the repo.
+3. To run tests, run `pnpm test` in the root of the repo.
+
 ## Submitting a Pull Request (PR)
 
 Before you submit your Pull Request (PR) consider the following guidelines:
 
-- Search [GitHub](https://github.com/mosjs/mos/pulls) for an open or closed PR
+- Search [GitHub](https://github.com/pnpm/pnpm/pulls) for an open or closed PR
   that relates to your submission. You don't want to duplicate effort.
 - Make your changes in a new git branch:
 

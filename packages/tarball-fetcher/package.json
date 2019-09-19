@@ -1,0 +1,63 @@
+{
+  "name": "@pnpm/tarball-fetcher",
+  "version": "3.1.16",
+  "description": "Fetcher for packages hosted as tarballs",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "lint": "tslint -c tslint.json src/**/*.ts test/**/*.ts",
+    "prepublishOnly": "pnpm run tsc",
+    "tsc": "rimraf lib && tsc",
+    "test": "pnpm run tsc && pnpm run lint && ts-node test && node example"
+  },
+  "repository": "https://github.com/pnpm/pnpm/blob/master/packages/tarball-fetcher",
+  "keywords": [
+    "pnpm",
+    "fetcher",
+    "tarball"
+  ],
+  "engines": {
+    "node": ">=8.15"
+  },
+  "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pnpm/pnpm/issues"
+  },
+  "homepage": "https://github.com/pnpm/pnpm/blob/master/packages/tarball-fetcher#readme",
+  "peerDependencies": {
+    "@pnpm/logger": "^2.1.0"
+  },
+  "dependencies": {
+    "@pnpm/error": "workspace:1.0.0",
+    "@pnpm/fetcher-base": "workspace:3.0.4",
+    "credentials-by-uri": "1.0.0",
+    "fetch-from-npm-registry": "workspace:2.0.7",
+    "graceful-fs": "4.2.1",
+    "make-dir": "3.0.0",
+    "mem": "5.1.1",
+    "mz": "2.7.0",
+    "path-temp": "2.0.0",
+    "retry": "0.12.0",
+    "rimraf": "3.0.0",
+    "ssri": "6.0.1",
+    "unpack-stream": "6.0.0"
+  },
+  "devDependencies": {
+    "@pnpm/logger": "2.1.1",
+    "@pnpm/tarball-fetcher": "link:",
+    "@types/graceful-fs": "^4.1.2",
+    "@types/mz": "^0.0.32",
+    "@types/nock": "^10.0.0",
+    "@types/retry": "^0.12.0",
+    "@types/rimraf": "^2.0.2",
+    "@types/ssri": "^6.0.1",
+    "cp-file": "7.0.0",
+    "nock": "11.3.4",
+    "tape": "4.11.0",
+    "tempy": "0.3.0"
+  }
+}

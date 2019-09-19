@@ -1,14 +1,4 @@
-declare module 'proper-lockfile' {
-  const anything: any;
-  export = anything;
-}
-
 declare module 'camelcase' {
-  const anything: any;
-  export = anything;
-}
-
-declare module 'caw' {
   const anything: any;
   export = anything;
 }
@@ -19,8 +9,8 @@ declare module 'cross-spawn' {
 }
 
 declare module 'is-ci' {
-  const anything: any;
-  export = anything;
+  const isCI: boolean;
+  export = isCI;
 }
 
 declare module 'loud-rejection' {
@@ -48,27 +38,12 @@ declare module 'normalize-path' {
   export = anything;
 }
 
-declare module 'npm-package-arg' {
+declare module '@zkochan/npm-package-arg' {
   const anything: any;
   export = anything;
 }
 
 declare module 'observatory' {
-  const anything: any;
-  export = anything;
-}
-
-declare module 'os-homedir' {
-  const anything: any;
-  export = anything;
-}
-
-declare module 'rimraf-then' {
-  const anything: any;
-  export = anything;
-}
-
-declare module 'thenify' {
   const anything: any;
   export = anything;
 }
@@ -93,21 +68,6 @@ declare module 'anonymous-npm-registry-client' {
   export = anything;
 }
 
-declare module 'arr-flatten' {
-  const anything: any;
-  export = anything;
-}
-
-declare module 'find-up' {
-  const anything: any;
-  export = anything;
-}
-
-declare module 'path-exists' {
-  const anything: any;
-  export = anything;
-}
-
 declare module 'exists-link' {
   const anything: any;
   export = anything;
@@ -116,36 +76,6 @@ declare module 'exists-link' {
 declare module 'path-name' {
   const anything: any;
   export = anything;
-}
-
-declare module '@zkochan/cmd-shim' {
-  const anything: any;
-  export = anything;
-}
-
-declare module 'write-pkg' {
-  const anything: any;
-  export = anything;
-}
-
-declare module 'write-json-file' {
-  const anything: any;
-  export = anything;
-}
-
-declare module 'mem' {
-  const anything: any;
-  export = anything;
-}
-
-declare module 'pnpm-install-checks' {
-  const anything: any;
-  export = anything;
-}
-
-declare module 'is-windows' {
-  function isWindows(): boolean;
-  export = isWindows;
 }
 
 declare module 'bole' {
@@ -163,40 +93,9 @@ declare module 'execa' {
   export = anything;
 }
 
-declare module 'module' {
-  const anything: any;
-  export = anything;
-}
-
-declare module 'p-limit' {
-  const anything: any;
-  export = anything;
-}
-
 declare module 'p-filter' {
   const anything: any;
   export = anything;
-}
-
-declare module 'read-pkg' {
-  const anything: any;
-  export = anything;
-}
-
-declare module 'mkdirp-promise' {
-  const anything: any;
-  export = anything;
-}
-
-declare module 'load-yaml-file' {
-  interface LoadYamlFile {
-    <T>(filepath: string): Promise<T>
-    sync<T>(filepath: string): T
-  }
-
-  const loadYamlFile: LoadYamlFile
-
-  export = loadYamlFile;
 }
 
 declare module 'normalize-ssh' {
@@ -234,19 +133,13 @@ declare module 'npm/lib/config/get-credentials-by-uri' {
   export = anything;
 }
 
-declare module 'pnpm-registry-mock' {
-  const anything: any;
-  export = anything;
+declare namespace pnpmRegistryMock {
+  function getIntegrity (pkgName: string, pkgVersion: string): string
+  function addDistTag (opts: {package: string, version: string, distTag: string}): Promise<void>
 }
 
-declare module 'read-package-json' {
-  const anything: any;
-  export = anything;
-}
-
-declare module 'ssri' {
-  const anything: any;
-  export = anything;
+declare module '@pnpm/registry-mock' {
+  export = pnpmRegistryMock
 }
 
 declare module 'dint' {
@@ -259,17 +152,162 @@ declare module 'is-subdir' {
   export = anything;
 }
 
+declare module 'encode-registry' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'validate-npm-package-name' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'graph-sequencer' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'import-from' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'is-windows' {
+  function isWindows(): boolean;
+  export = isWindows;
+}
+
+declare module 'diable' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'signal-exit' {
+  const anything: any;
+  export = anything;
+}
+
+declare module '@zkochan/libnpx/index' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'process-exists' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'read-ini-file' {
+  function readIniFile (filename: string): Promise<Object>;
+  export = readIniFile;
+}
+
+declare module 'better-path-resolve' {
+  const anything: any;
+  export = anything;
+}
+
+declare module '@zkochan/npm-conf' {
+  const anything: any;
+  export = anything;
+}
+
+declare module '@zkochan/npm-conf/lib/types' {
+  const anything: any;
+  export = anything;
+}
+
+declare module '@zeit/fetch-retry' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'node-fetch-unix' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'https-proxy-agent' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'socks-proxy-agent' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'read-package-json' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'write-file-atomic' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'graceful-git' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'hosted-git-info' {
+  const anything: any;
+  export = anything;
+}
+
+declare module '@zkochan/npm-lifecycle' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'pretty-time' {
+  function prettyTime (time: [number, number]): string;
+  export = prettyTime;
+}
+
+declare module 'right-pad' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'stacktracey' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'ansi-diff' {
+  const anything: any;
+  export = anything;
+}
+
 declare module 'normalize-registry-url' {
   function normalizeRegistryUrl (registry: string): string
   export = normalizeRegistryUrl;
 }
 
-declare module 'encode-registry' {
-  function encodeRegistry (registry: string): string
-  export = encodeRegistry;
+declare module 'fs-vacuum' {
+  const anything: any;
+  export = anything;
 }
 
-declare module 'text-table' {
+declare module 'rename-overwrite' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'is-port-reachable' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'fast-glob' {
+  const anything: any;
+  export = anything;
+}
+
+declare module 'yaml-tag' {
   const anything: any;
   export = anything;
 }
@@ -279,7 +317,7 @@ declare module 'normalize-newline' {
   export = anything;
 }
 
-declare module 'strip-color' {
-  function stripColor (text: string): string
-  export = stripColor;
+declare module 'cli-columns' {
+  function cliColumns (values: string[], opts?: { newline?: string, width?: number }): string
+  export = cliColumns;
 }
